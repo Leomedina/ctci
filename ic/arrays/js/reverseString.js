@@ -2,13 +2,13 @@
 
 /**
  * 
- * Complexity 
- * Space: O(n)
+ * Complexity REVERSES IN PLACE!
+ * Space: O(1)
  * Time: O(n)
  * 
  */
 function revString(string) {
-  return string.split("").reverse().join("");
+  return string.reverse();
 }
 
 /**
@@ -24,14 +24,15 @@ function reverse(array) {
 
   while (leftIndex < rightIndex) {
 
-    const temp = array[leftIndex]
+    const temp = array[leftIndex];
     
     array[leftIndex] = array[rightIndex];
-    array[rightIndex] = temp
+    array[rightIndex] = temp;
 
     leftIndex++;
     rightIndex--;
   }
+  return array;
 }
 
-reverse(['h','e','l','l','l'])
+console.log(revString(["A","R","R","Y"]))
