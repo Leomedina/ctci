@@ -7,10 +7,13 @@
  *   
  */
 
-let testArray = ['s', 't', 'e', 'a', 'k', 's', ' ', 'r', 'u', 'l', 'e', ' ', 'a', 'l', 'l'];
-/*['a', 'l', 'l', ' ', 'r', 'u', 'l', 'e',' ', 's', 't', 'e','a', 'k', 's']
-*/
-
+/**
+ * 
+ * Complexity:
+ *  Space: O(1)
+ *  Time: O(n)
+ * 
+ */
 
 function reverseWords(arrayString) {
   // fancy way of reversing an array in place - see ReverseString.Js for a manual implementation
