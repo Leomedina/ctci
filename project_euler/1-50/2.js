@@ -10,18 +10,22 @@
  * 
  */
 
- // THIS IS A WORK IN PROGRESS - running will give you a memory leak
 
-function evenFibbonaccis(max = 4000000) {
-  const fibs = [1];
-
-  while (fibs.slice(-1) < 5) {
-    if (fibs.length === 1) fibs.push(1);
-    if (fibs.length === 2) fibs.push((fibs[fibs.length] + fibs[fibs.length - 1]));
-    fibs.push(fibs[fibs.length] + fibs[fibs.length - 1] + fibs[fibs.length - 1]);
-    fibs.push(1)
+function sumOfEvenFibbonaccis(max) {
+  let fibs = 0;
+  for (let i = 0; fib(i) < max; i++) {
+    if (fib(i) % 2 === 0) {
+      fibs += fib(i);
+    }
   }
-  return fibs.filter(number => number % 2 === 0);
+  return fibs
 }
 
-console.log(evenFibbonaccis())
+function fib(n) {
+  if (n <= 0) return 0
+  if (n === 1) return 1
+
+  return fib(n - 1) + fib(n - 2);
+}
+
+console.log(sumOfEvenFibbonaccis(4000000));
