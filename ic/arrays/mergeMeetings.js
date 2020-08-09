@@ -1,23 +1,34 @@
 const meetingTimes = [
-  { startTime: 0, endTime: 1 },
+  { startTime: 1, endTime: 10 },
+  { startTime: 2, endTime: 6 },
   { startTime: 3, endTime: 5 },
-  { startTime: 4, endTime: 8 },
-  { startTime: 10, endTime: 12 },
-  { startTime: 9, endTime: 10 },
+  { startTime: 7, endTime: 9 },
 ]
+/**
+ * 
+ * COMPLEXITY:
+ * Time: O(n);
+ * Space: O(1);
+ * 
+ */
 
-function mergeRanges(meetings) {
+function mergeMeetings(meetingTimes) {
+  meetingTimes.sort((a, b) => a.startTime - b.startTime);
 
-  // meetings.map(mapMeeting => {
-  //   meetings.forEach(forEachMeeting => {
-  //     if (mapMeeting.startTime >= forEachMeeting.startTime && mapMeeting.startTime <= forEachMeeting.endTime) {
-  //       mapMeeting.endTime = forEachMeeting.endTime;
-  //       meetings.splice(meetings.indexOf(forEachMeeting), 1);
-  //     };
-  //   });
-  // });
+  for (let i = 0; i < meetingTimes.length; i++) {
+    if (i > 0) {
+      let meeting1 = meetingTimes[i];
+      let meeting2 = meetingTimes[i - 1];
 
-  return meetings;
+      if (meeting1.startTime >= meeting2.startTime && meeting1.startTime <= meeting2.endTime) {
+        if (meeting1.endTime > meeting2.endTime) {
+          meeting2.endTime = meeting1.endTime;
+        };
+      };
+      meetingTimes.splice(i, 1);
+    };
+  };
+  if (meetingTimes.length > 1) mergeMeetings(meetingTimes);
+  return meetingTimes;
 }
-
-console.log(mergeRanges(meetingTimes))
+console.log(mergeMeetings(meetingTimes));
