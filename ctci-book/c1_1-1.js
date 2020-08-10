@@ -15,14 +15,14 @@ const array2 = ["a", "b", "c", "d", "d"]; // false
  * Complexity:
  * 
  * Space: O(1)
- * Time: O(n) -> possible that it's O(n log n) since includes might be O(n)
+ * Time: O(n log n) since includes might be O(n)
  * 
  */
 
 function isUnique(array) {
   const temp = []
   let result = true;
-
+  
   array.forEach(char => {
     if (temp.includes(char)) {
       result = false;
@@ -32,5 +32,25 @@ function isUnique(array) {
   return result;
 }
 
-console.log(isUnique(array1));
-console.log(isUnique(array2));
+/**
+ * 
+ * Complexity (better solution):
+ * 
+ * Space: O(1)
+ * Time: O(n) -> rather than looping through temp, you create a hash-map to get O(1) for each look up
+ * 
+ */
+
+function isUniqueBetter(array) {
+  const temp = {}
+  let result = true;
+  
+  array.forEach(char => {
+    if (temp[char]) result = false;
+    temp[char] = char;
+  });
+  return result;
+}
+
+console.log(isUniqueBetter(array1));
+console.log(isUniqueBetter(array2));
