@@ -4,12 +4,19 @@
  *  -> Created for testing functions that require LinkedLists
  * 
  *  */
-import LinkedListNode from "./LinkedListNode";
+const LinkedListNode = require("./LinkedListNode");
 
 class LinkedList {
-  constructor() {
+  constructor(value) {
     this.head = null;
     this.tail = null;
+
+    if (value) {
+      if (Array.isArray(value)) return this.fromArray(value);
+      return new TypeError(value + ' is not iterable');
+    };
+
+    return this;
   }
 
   prepend(value) {
@@ -26,15 +33,36 @@ class LinkedList {
       this.head = newNode;
       this.tail = newNode;
       return this;
-    }
-
+    };
     this.tail.next = newNode;
     this.tail = newNode;
     return this;
   }
 
+  fromArray(values) {
+    values.forEach(value => this.append(value));
+    return this;
+  }
 
+  getSize() {
+    let count = 0;
+    let node = this.head;
+    while (node) {
+      count++;
+      node = node.next
+    }
+    return count;
+  }
+  
+  toArray(useNodes = false) {
+    const nodes = [];
+    let currentNode = this.head;
+    while (currentNode) {
+      nodes.push(useNodes ? currentNode : currentNode.value);
+      currentNode = currentNode.next;
+    };
+    return nodes;
+  }
 }
 
-
-export default LinkedList;
+module.exports = LinkedList;

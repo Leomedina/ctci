@@ -8,8 +8,8 @@
 class LinkedListNode {
   constructor(value, next) {
     this.value = value;
-    this.next = next || nul;
+    this.next = next || null;
   }
 }
 
-export default LinkedListNode;
+module.exports = LinkedListNode;

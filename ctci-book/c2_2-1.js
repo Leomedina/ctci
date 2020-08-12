@@ -6,21 +6,22 @@
  * -> How would you solve it without a temporary buffer
  *
  */
-import LinkedList from "../utilities/LinkedList";
 
+/** Initiating linked list test [ 1, 2, 3, 2, 4, 5, 1] -> removeDups -> [ 1, 2, 3, 4, 5] */
 
+const LinkedList = require("../utilities/LinkedList");
+
+const linkedList = new LinkedList([1, 2, 3, 2, 4, 5, 1]); // values are converted to a linked list
 
 function removeDups(linkedList) {
-  return null;
+  let currentNode = linkedList.head
+
+  return currentNode;
 }
 
+console.log(removeDups(linkedList));
 
 
-
-
-
-
-console.log(removeDups());
 // /**
 //  * 
 //  * Bad Solution - it's doubly bad since it's an implementation for a list and not a LinkedList
