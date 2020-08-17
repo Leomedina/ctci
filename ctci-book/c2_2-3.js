@@ -3,7 +3,7 @@
  *
  * Remove Middle Node:
  * Write a function that removes the middle node from a singly linked list
- *
+ * given a middleNode
  */
 
 /** Initiating linked list test [ 1, 2, 2, 4, 5, 1] -> return [ 1, 2, 4, 5, 1] */
