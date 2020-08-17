@@ -25,7 +25,7 @@ console.log(linkedList.toArray());
  */
 
 function getNumFromEnd(linkedList, numFromEnd) {
-  if (numFromEnd <= 0) return null;
+  if (numFromEnd < 0) return null;
 
   let currentNode = linkedList.head;
   let currentNodeFromEnd = null;
