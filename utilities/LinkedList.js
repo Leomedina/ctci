@@ -53,15 +53,25 @@ class LinkedList {
     }
     return count;
   }
-  
+
   toArray(useNodes = false) {
-    const nodes = [];
     let currentNode = this.head;
+    const nodes = [];
     while (currentNode) {
       nodes.push(useNodes ? currentNode : currentNode.value);
       currentNode = currentNode.next;
     };
     return nodes;
+  }
+
+  getMiddleNode() {
+    let currentNode = this.head;
+    const middlePoint = this.getSize() / 2;
+
+    for (let i = 1; i <= middlePoint; i++) {
+      currentNode = currentNode.next;
+    }
+    return currentNode;
   }
 }
 
