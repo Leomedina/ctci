@@ -12,26 +12,28 @@
 
 // {a: 2, z:1} !== {a:1, z:2} 
 function isValidAnagram(base, check) {
+  if(base.length !== check.length) return false;
   const freq1 = getFrequency(base);
   const freq2 = getFrequency(check);
-  let isValid = true;
 
   for (key of Object.keys(freq1)) {
-    if (freq1[key] !== freq2[key]) isValid = false;
+    if (freq1[key] !== freq2[key]) return false;
   };
-  return isValid;
+  return true
 };
 
 function getFrequency(str) {
-  const map = {};
+  const map = new Map();
 
   for (char of str.toLowerCase()) {
-    map[char] = map[char] + 1 || 1
+    map[char] = (map[char] + 1) || 1
   };
 
   return map;
 };
 
+console.log(isValidAnagram("aAz", "zzaa"));
 console.log(isValidAnagram("aAz", "zza"));
 console.log(isValidAnagram("awesom", "awesome"));
 console.log(isValidAnagram("tacocat", "cattaco"));
+console.log(isValidAnagram("tacocata", "cattaaco"));
