@@ -7,13 +7,13 @@ const meetingTimes = [
 /**
  * 
  * COMPLEXITY:
- * Time: O(n);
+ * Time: O(2n);
  * Space: O(1);
  * 
  */
 
 function mergeMeetings(meetingTimes) {
-  meetingTimes.sort((a, b) => a.startTime - b.startTime);
+  meetingTimes.sort((a, b) => a.startTime - b.startTime);//What is the O notation of this??
 
   for (let i = 0; i < meetingTimes.length; i++) {
     if (i > 0) {

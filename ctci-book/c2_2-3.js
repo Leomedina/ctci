@@ -26,9 +26,7 @@ console.log(linkedList.toArray());
 function deleteMiddleNode(linkedList) {
   let currentNode = linkedList.head;
   const middlePoint = Math.floor(getLinkedListSize(linkedList) / 2);
-
-  console.log(middlePoint)
-
+  
   for (let i = 1; i <= middlePoint; i++) {
     currentNode = currentNode.next;
   }

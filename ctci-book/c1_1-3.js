@@ -42,7 +42,7 @@ function URLifyBetter(url) {
     let temp = [];
     if (urlArray[i] === " ") {
       temp = urlArray.splice(i + 1)
-      urlArray.pop();
+      urlArray.pop(); 
       urlArray.push("%20");
       urlArray.push(...temp);
     }
