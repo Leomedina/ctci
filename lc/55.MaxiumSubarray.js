@@ -1,5 +1,5 @@
 /**
- *  Maximum Subarray
+ * 33. Maximum Subarray
  * 
  * Given an integer array nums,
  *    find the contiguous subarray (containing at least one number)
@@ -10,7 +10,7 @@
  *
  * Pattern: Sliding Window and divide and conquer
  *  
- * Uses Kadane's Algorithm, Sliding Window, Dynamic Programming
+ * Tags: Kadane's Algorithm, Dynamic Programming
 */
 
 
