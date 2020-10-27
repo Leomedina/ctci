@@ -53,6 +53,9 @@ practices and code re-usability.
 **Skills**: Advanced Excel, Word, PowerPoint. Fluent in Spanish and English.
 
 ### EDUCATION
-**Springboard** Apr.2020 - Oct.2020 Software Engineering Career Track 2020An *800-hour course covering multiple aspects of software development. The curriculum includes modern JavaScript, DOM manipulation, event-driven programming,AJAX, databases, data-structure, and algorithms with frameworks such as ReactJS, Redux, Express, Flask, and Node.*
+**Springboard** Apr.2020 - Oct.2020 Software Engineering Career Track 2020
+*An 800-hour course covering multiple aspects of software development. The curriculum includes modern JavaScript, DOM manipulation, event-driven programming,AJAX, databases, data-structure, and algorithms with frameworks such as ReactJS, Redux, Express, Flask, and Node.*
+
 **City College of New York** Spring2011 - Fall2014 (International Relations) 
+
 **Westchester Community College** Fall2009 - Spring2011 (Liberal Arts and Sciences)
