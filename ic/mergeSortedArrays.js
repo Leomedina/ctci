@@ -1,5 +1,5 @@
-const myArray = [3, 4, 6, 10, 11, 15];
-const alicesArray = [1, 5, 8, 12, 14, 19];
+const myArray = [3, 4, 6, 6, 6, 6, 10, 11, 15];
+const alicesArray = [1, 5, 5, 5, 8, 12, 14, 19];
 
 /**
  * 
@@ -19,7 +19,7 @@ function badMergeArrays(array, secondArray) {
  * 
  * Complexity:
  * Space: O(2n)
- * Time: O(n)
+ * Time: O(nm)
  * 
  * 
 */
