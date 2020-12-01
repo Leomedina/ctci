@@ -8,12 +8,23 @@
  */
 
 
- /**
-  * findSubsets
-  * @param {number} nums
-  * @return {number[]} 
-  */
+/**
+ * findSubsets
+ * @param {number} nums
+ * @return {number[]} 
+ */
 
- function findSubsets(nums){
-   return true;
- };
+function findSubsets(numbers) {
+  let subsets = [[]];
+
+  for (let number of numbers) {
+    let subset = new Set([...subsets]);
+    subsets.forEach(num => subset.add([...num, number]));
+    subsets = [...subset];
+  };
+
+  return subsets;
+};
+
+console.log(findSubsets([1, 2, 3]));
+console.log(findSubsets([1]));
