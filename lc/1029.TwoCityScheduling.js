@@ -17,18 +17,10 @@
  */
 
 function twoCitySchedCost(costs) {
-  let total = 0;
-
-  for (let cost of costs) {
-    let temp = cost[0];
-    
-    for (let price of cost) {
-      temp = price < temp ? price : temp;
-    }
-    
-    total += temp;
+  for (let cost in costs) {
+    costs[cost] = costs[cost].reduce((accum, currVal)=> accum + currVal);
   };
-  return total;
+  return costs;
 };
 
 
