@@ -1,6 +1,11 @@
-function mergeSort(a, b) {
+function mergeSort(a) {
+  if (a.length <= 1) return a;
 
+  let mid = Math.floor(a.length / 2);
+  let halfA = mergeSort(a.slice(0, mid));
+  let halfB = mergeSort(a.slice(mid));
 
+  return mergeSortedArrays(halfA, halfB);
 };
 
 function mergeSortedArrays(a, b) {
@@ -18,19 +23,17 @@ function mergeSortedArrays(a, b) {
     };
   };
 
-  if (i < a.length) {
-    for (let i = i; i < a.length; i++) {
-      result.push(a[i]);
-    };
+  while (i < a.length) {
+    result.push(a[i]);
+    i++
   };
 
-  if (j < b.length) {
-    for (let i = j; i < b.length; i++) {
-      result.push(b[i]);
-    };
-  };
+  while (j < b.length) {
+    result.push(b[j]);
+    j++
+  }
 
   return result;
 };
 
-console.log(mergeSortedArrays([1, 3, 4, 5], [2, 5, 6, 7]));
+console.log(mergeSort([1, 4, 6, 78, 98, 3, 2]));
