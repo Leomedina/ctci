@@ -10,7 +10,7 @@ function isValidParen(s) {
     if (temp === '(' && i === ')') continue;
     if (temp === '[' && i === ']') continue;
     if (temp === '{' && i === '}') continue;
-    if (temp) stack.push(temp);
+    if (temp  ) stack.push(temp);
     stack.push(i);
   }
 

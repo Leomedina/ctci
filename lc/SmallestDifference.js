@@ -18,4 +18,4 @@ function smallestDifference(arrayOne, arrayTwo) {
   return smallest;
 };
 
-console.log(smallestDifference([-1, 5, 10, 20, 28, 3], [26, 134, 135, 15, 17]));
+console.log(smallestDifference([240, 124, 86, 111, 2, 84, 954, 27, 89], [1, 3, 954, 19, 8]));
