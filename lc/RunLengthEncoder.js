@@ -1,3 +1,4 @@
+/** Run length encoder   */
 function runLengthEncoding(string) {
   let counter = 1;
   let res = [];
@@ -13,9 +14,8 @@ function runLengthEncoding(string) {
     counter++;
   };
 
-
   return res.join('');
-};  
+};
 
 
 console.log(runLengthEncoding(";;;;;;;;;;;;''''''''''''''''''''1233333332222211112222111s"));
