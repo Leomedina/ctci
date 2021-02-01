@@ -17,7 +17,7 @@ function isAnagram(s, s1) {
   return true;
 }
 
-console.log(isAnagram('', '')) // True
+console.log(isAnagram('a', 'b')) // false
 console.log(isAnagram('aaz', 'zza')) // False
 console.log(isAnagram('anagram', 'nagaram')) // True
 console.log(isAnagram('rat', 'cat')) // False
