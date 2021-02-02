@@ -1,4 +1,4 @@
-/** Find and return the start of a linkedlist loop */
+/** Find and return the start of a linked list loop */
 
 function findLoop(head) {
   let p1 = head.next;
