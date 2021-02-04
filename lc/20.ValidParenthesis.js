@@ -10,7 +10,7 @@ function isValidParen(s) {
     if (temp === '(' && i === ')') continue;
     if (temp === '[' && i === ']') continue;
     if (temp === '{' && i === '}') continue;
-    if (temp  ) stack.push(temp);
+    if (temp) stack.push(temp);
     stack.push(i);
   }
 
@@ -19,19 +19,3 @@ function isValidParen(s) {
 };
 
 console.log(isValidParen("([]){"));
-
-
-// function isValidParen(s) {
-//   if (s.length < 2) return false;
-//   let i = 0;
-//   let j = 1;
-
-//   while (i < s.length) {
-//     if (s[i] === '(' && s[j] !== ')') return false;
-//     if (s[i] === '[' && s[j] !== ']') return false;
-//     if (s[i] === '{' && s[j] !== '}') return false;
-//     i = i + 2;
-//     j = j + 2;
-//   };
-//   return true;
-// };
